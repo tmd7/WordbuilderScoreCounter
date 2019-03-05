@@ -1,0 +1,3 @@
+package com.mtlepberghenov.wordbuilderscorecounter.base
+
+interface Router
