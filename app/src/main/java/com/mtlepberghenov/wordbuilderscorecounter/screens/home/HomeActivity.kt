@@ -1,11 +1,12 @@
-package com.mtlepberghenov.wordbuilderscorecounter
+package com.mtlepberghenov.wordbuilderscorecounter.screens.home
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.mtlepberghenov.wordbuilderscorecounter.R
 import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : AppCompatActivity() {
+class HomeActivity : AppCompatActivity() {
 
     private val mOnNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
         when (item.itemId) {
