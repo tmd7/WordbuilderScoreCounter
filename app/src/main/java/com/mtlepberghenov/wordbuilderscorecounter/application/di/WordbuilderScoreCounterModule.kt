@@ -6,7 +6,7 @@ import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton
 
-@Module(includes = [WordbuilderScoreCounterBinding::class])
+@Module(includes = [WordbuilderScoreCounterModuleBinding::class])
 class WordbuilderScoreCounterModule(val application: BaseApplication) {
 
     //There are provide object on app level

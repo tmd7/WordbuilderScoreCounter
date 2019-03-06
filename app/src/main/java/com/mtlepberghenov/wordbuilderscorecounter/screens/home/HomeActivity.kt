@@ -1,12 +1,16 @@
 package com.mtlepberghenov.wordbuilderscorecounter.screens.home
 
-import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.mtlepberghenov.wordbuilderscorecounter.R
+import com.mtlepberghenov.wordbuilderscorecounter.base.BaseActivity
+import com.mtlepberghenov.wordbuilderscorecounter.base.BaseView
 import kotlinx.android.synthetic.main.activity_main.*
 
-class HomeActivity : AppCompatActivity() {
+interface HomeView : BaseView
+
+class HomeActivity : BaseActivity<HomeView, HomeRouter, HomeInteractor>(), HomeView {
+    override val resId = R.layout.activity_main
+    override val view = this
 
     private val mOnNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
         when (item.itemId) {
@@ -24,12 +28,5 @@ class HomeActivity : AppCompatActivity() {
             }
         }
         false
-    }
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-
-        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
     }
 }
